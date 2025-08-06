@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Nette\Utils\Strings;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('kematians', function (Blueprint $table) {
+            $table->id();
+
+
+            $table->date('tanggal_kematian');
+            $table->time('jam_kematian');
+            $table->string('sebab_kematian');
+            $table->string('jenis_kematian'); // Misalnya: "Alami", "Tidak Alami"
+            $table->string('tempat_kematian'); // Misalnya
+            $table->string('alamat_kematian');
+
+            $table->string('nama_pelapor'); // Nama orang yang melaporkan kematian
+            $table->string('hubungan_pelapor'); // Hubungan pelapor dengan jenazah, misalnya "Anak", "Istri", "Saudara"
+            $table->string('alamat_pelapor'); // Alamat pelapor
+            $table->string('nomor_telepon_pelapor')->nullable(); // Nom
+
+
+            $table->foreignId('penduduk_id')->nullable()->constrained('penduduks')->onDelete('cascade');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('kematians');
+    }
+};
