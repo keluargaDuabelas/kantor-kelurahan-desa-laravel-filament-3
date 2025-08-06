@@ -1,3 +1,12 @@
+
+![dashboard III (1)](https://github.com/user-attachments/assets/c282b15d-96cc-4531-bcbc-1ae9b8aacc80)
+![dashboard](https://github.com/user-attachments/assets/5f025430-f612-4d54-a5db-84a9d82f91bf)
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
